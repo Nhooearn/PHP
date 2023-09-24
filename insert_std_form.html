@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+
+                var id = $('input[name="id"]').val();
+                var en_name = $('input[name="en_name"]').val();
+                var en_surname = $('input[name="en_surname"]').val();
+                var th_name = $('input[name="th_name"]').val();
+                var th_surname = $('input[name="th_surname"]').val();
+                var major_code = $('input[name="major_code"]').val();
+                var email = $('input[name="email"]').val();
+
+                if (id === '' || en_name === '' || en_surname === '' || th_name === '' || th_surname === '' || major_code === '' || email === '') {
+                    alert('กรุณากรอกข้อมูลให้ครบทุกช่อง');
+                    return;
+                }
+
+                this.submit();
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <form method="post" action="insert_std.php">
+        id: <input type="text" name="id"></br>
+        name:<input type="text" name="en_name"></br>
+        surname:<input type="text" name="en_surname"></br>
+        ชื่อ:<input type="text" name="th_name"></br>
+        นามสกุล:<input type="text" name="th_surname"></br>
+        Major:<input type="text" name="major_code"></br>
+        Email:<input type="text" name="email"></br>
+        <input type="submit"><input type="reset">
+    </form>
+</body>
+
+</html>
