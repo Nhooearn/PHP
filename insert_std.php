@@ -33,7 +33,7 @@ $sql = "INSERT INTO `std_info` (`id`, `en_name`, `en_surname`, `th_name`, `th_su
 $result = mysqli_query($conn, $sql);
 if ($result) {
   echo "<script>
-            alert('Record updated successfully!');
+            alert('New record successfully!');
             window.location.href = 'student.php';
           </script>";
 } else {
